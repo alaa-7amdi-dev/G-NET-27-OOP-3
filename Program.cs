@@ -13,6 +13,19 @@
 
             #endregion
 
+            #region Part 02
+              //A: Yes ,A child class can access  a protected field even differenet assemply.
+              // No , becouse the outer class inherits a field as private field.
+
+              //B :  protected internal=> can access the field or prop in the same assemply or in different assemply  
+              //   as long as it inherits from parent .
+              //     private protected=> can access and inherits field in the same assemply only.
+
+              //C:  when applied to the class=> the interitance Chain stops.
+              //    when applied to the mathiod => can not change or Override the method inherits.
+
+             // D:  yes can create an abject from sealed class , sealed only prevents inheritance.
+            #endregion
         }
     }
 }
