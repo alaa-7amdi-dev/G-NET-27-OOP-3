@@ -1,4 +1,6 @@
-﻿namespace G_NET_27_OOP_3
+﻿using G_NET_27_OOP_3.Inheritance;
+
+namespace G_NET_27_OOP_3
 {
     internal class Program
     {
@@ -14,17 +16,38 @@
             #endregion
 
             #region Part 02
-              //A: Yes ,A child class can access  a protected field even differenet assemply.
-              // No , becouse the outer class inherits a field as private field.
+            //A: Yes ,A child class can access  a protected field even differenet assemply.
+            // No , becouse the outer class inherits a field as private field.
 
-              //B :  protected internal=> can access the field or prop in the same assemply or in different assemply  
-              //   as long as it inherits from parent .
-              //     private protected=> can access and inherits field in the same assemply only.
+            //B :  protected internal=> can access the field or prop in the same assemply or in different assemply  
+            //   as long as it inherits from parent .
+            //     private protected=> can access and inherits field in the same assemply only.
 
-              //C:  when applied to the class=> the interitance Chain stops.
-              //    when applied to the mathiod => can not change or Override the method inherits.
+            //C:  when applied to the class=> the interitance Chain stops.
+            //    when applied to the mathiod => can not change or Override the method inherits.
 
-             // D:  yes can create an abject from sealed class , sealed only prevents inheritance.
+            // D:  yes can create an abject from sealed class , sealed only prevents inheritance.
+            #endregion
+
+            #region Practical Ex
+
+            Cinema cinema = new Cinema("Metroplicano");
+            cinema.OpenCinema();
+
+            StandardTicket standardTicket = new StandardTicket("A","Inception",200);
+            VIPTicket vIPTicket = new VIPTicket(true,33,"Avengers",220);
+            IMAXTicket iMAXTicket = new IMAXTicket(false,"Dune",300);
+
+            cinema.AddTicket(standardTicket);
+            cinema.AddTicket(vIPTicket);
+            cinema.AddTicket(iMAXTicket);
+
+            Console.WriteLine(standardTicket);
+            Console.WriteLine(vIPTicket);
+            Console.WriteLine(iMAXTicket);
+
+            cinema.CloseCinema();
+            Console.WriteLine("==========Cinema Closed=======");
             #endregion
         }
     }
