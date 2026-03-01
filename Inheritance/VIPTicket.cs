@@ -22,5 +22,10 @@ namespace G_NET_27_OOP_3.Inheritance
                 $"Lounge Access :{LoungeAccess} | Service : {ServiceFee}";
 
         }
+        public override void PrintTicket()
+        {
+            base.PrintTicket();
+            Console.WriteLine($" |  Lounge Access :{LoungeAccess}  | Service : {ServiceFee} EGP");
+        }
     }
 }

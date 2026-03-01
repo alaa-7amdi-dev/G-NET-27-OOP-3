@@ -33,6 +33,17 @@ namespace G_NET_27_OOP_3.Inheritance
 			}
 		}
 
+        public void SetPrice(decimal price) 
+        { 
+            _price= price;
+        
+        }
+
+        public void SetPrice(decimal baseprice, decimal Multiplier)
+        {
+           _price = baseprice * Multiplier;
+        }
+
         public decimal PriceAfterTax => _price + (_price * _tax);
 
         public override string ToString()
@@ -44,6 +55,11 @@ namespace G_NET_27_OOP_3.Inheritance
         public static int GetTotalTicket()
         {
             return _counter;
+        }
+
+        public virtual void PrintTicket() 
+        {
+            Console.WriteLine($"TicketId : {TicketId} | Movie Name : {MovieName} |  Price : {Price}  | Price After Tax : {PriceAfterTax}" );
         }
     }
 }

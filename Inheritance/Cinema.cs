@@ -34,13 +34,19 @@ namespace G_NET_27_OOP_3.Inheritance
         public void printAll()
         {
             Console.WriteLine($"Cinema Name : {CinemaName}");
+            bool found = false;
             foreach (var t in _ticket)
             {
                 if (t != null)
                 {
-                    Console.WriteLine(t.ToString());
+                    t.PrintTicket();
+                    found = true;
                 }
-                Console.WriteLine("Ticket not added yet");
+                if (!found)
+                {
+                    Console.WriteLine("Ticket not added yet");
+                }
+                
             }
 
         }
@@ -53,6 +59,15 @@ namespace G_NET_27_OOP_3.Inheritance
         {
             Console.WriteLine($"==============Cinema Closed================");
             _projector.Stop();
+        }
+
+        public static void ProcessTicket(Ticket ticket)
+        {
+            if (ticket == null)
+            {
+                throw new ArgumentNullException(nameof(ticket));
+            }
+            ticket.PrintTicket();
         }
     }
 

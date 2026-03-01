@@ -1,4 +1,5 @@
 ﻿using G_NET_27_OOP_3.Inheritance;
+using System.Runtime.InteropServices.Marshalling;
 
 namespace G_NET_27_OOP_3
 {
@@ -31,24 +32,52 @@ namespace G_NET_27_OOP_3
 
             #region Practical Ex
 
-            Cinema cinema = new Cinema("Metroplicano");
-            cinema.OpenCinema();
+            //Cinema cinema = new Cinema("Metroplicano");
+            //cinema.OpenCinema();
 
-            StandardTicket standardTicket = new StandardTicket("A","Inception",200);
-            VIPTicket vIPTicket = new VIPTicket(true,33,"Avengers",220);
-            IMAXTicket iMAXTicket = new IMAXTicket(false,"Dune",300);
+            //StandardTicket standardTicket = new StandardTicket("A","Inception",200);
+            //VIPTicket vIPTicket = new VIPTicket(true,33,"Avengers",220);
+            //IMAXTicket iMAXTicket = new IMAXTicket(false,"Dune",300);
 
-            cinema.AddTicket(standardTicket);
-            cinema.AddTicket(vIPTicket);
-            cinema.AddTicket(iMAXTicket);
+            //cinema.AddTicket(standardTicket);
+            //cinema.AddTicket(vIPTicket);
+            //cinema.AddTicket(iMAXTicket);
 
-            Console.WriteLine(standardTicket);
-            Console.WriteLine(vIPTicket);
-            Console.WriteLine(iMAXTicket);
+            //Console.WriteLine(standardTicket);
+            //Console.WriteLine(vIPTicket);
+            //Console.WriteLine(iMAXTicket);
 
-            cinema.CloseCinema();
-            Console.WriteLine("==========Cinema Closed=======");
+            //cinema.CloseCinema();
+            //Console.WriteLine("==========Cinema Closed=======");
+            #endregion
+
+            #region Refactor
+            //Cinema cinema = new Cinema("Metroplicano");
+            //cinema.OpenCinema();
+            //StandardTicket standardTicket = new StandardTicket("B4", "Inception", 200);
+            //VIPTicket vIP = new VIPTicket(false, 50m, "Avengers", 300);
+            //IMAXTicket iMAX = new IMAXTicket(true, "Dune", 250);
+
+            //vIP.SetPrice(200);
+            //Console.WriteLine($" Setting Price Directly : {vIP.Price}");
+            //vIP.SetPrice(200, 2);
+            //Console.WriteLine($"Setting Price With Multiplier : {vIP.Price}");
+
+            //cinema.AddTicket(vIP);
+            //cinema.AddTicket(standardTicket);
+            //cinema.AddTicket(iMAX);
+
+            //cinema.printAll();
+
+            //Cinema.ProcessTicket(vIP);
+
+
+            //cinema.CloseCinema();
+           
+
+
             #endregion
         }
+  
     }
 }

@@ -24,6 +24,12 @@ namespace G_NET_27_OOP_3.Inheritance
 
         }
 
+        public override void PrintTicket()
+        {
+            base.PrintTicket();
+            Console.WriteLine($" | Is3D : {Is3D}");
+        }
+
 
     }
 }
