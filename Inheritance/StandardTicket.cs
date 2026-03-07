@@ -1,4 +1,5 @@
-﻿using System;
+﻿using G_NET_27_OOP_3.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace G_NET_27_OOP_3.Inheritance
 {
-    internal class StandardTicket : Ticket
+    internal class StandardTicket : Ticket , IPrintable
     {
         public string SeatNumber { get; set; }
 
@@ -28,5 +29,10 @@ namespace G_NET_27_OOP_3.Inheritance
             Console.WriteLine($" Seat Number : {SeatNumber}");
         }
 
+        public override void Print()
+        {
+            base.Print();
+            Console.WriteLine($" Seat Number : {SeatNumber}");
+        }
     }
 }

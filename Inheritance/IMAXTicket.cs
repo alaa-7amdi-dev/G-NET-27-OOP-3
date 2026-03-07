@@ -30,6 +30,10 @@ namespace G_NET_27_OOP_3.Inheritance
             Console.WriteLine($" | Is3D : {Is3D}");
         }
 
-
+        public override void Print()
+        {
+            base.Print();
+            Console.WriteLine($" | Is3D : {Is3D}");
+        }
     }
 }

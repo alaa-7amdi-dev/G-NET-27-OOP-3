@@ -27,5 +27,17 @@ namespace G_NET_27_OOP_3.Inheritance
             base.PrintTicket();
             Console.WriteLine($" |  Lounge Access :{LoungeAccess}  | Service : {ServiceFee} EGP");
         }
+
+        public override void Print()
+        {
+            base.Print();
+            Console.WriteLine($" |  Lounge Access :{LoungeAccess}  | Service : {ServiceFee} EGP");
+
+        }
+        public override Ticket Clone()
+        {
+            VIPTicket vIP = (VIPTicket)this.MemberwiseClone();
+            return vIP;
+        }
     }
 }

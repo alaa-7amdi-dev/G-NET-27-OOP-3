@@ -1,4 +1,5 @@
-﻿using System;
+﻿using G_NET_27_OOP_3.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace G_NET_27_OOP_3.Inheritance
 {
-    internal class Cinema
+    internal class Cinema 
     {
         public string? CinemaName { get; set; }
         private Projector _projector { get; set; }
         public Ticket[] _ticket = new Ticket[20];
 
+      
         public Cinema(string? cinemaName)
         {
             CinemaName = cinemaName;
@@ -69,6 +71,25 @@ namespace G_NET_27_OOP_3.Inheritance
             }
             ticket.PrintTicket();
         }
+
+        public void PrintInfo() 
+        {
+         
+            Console.WriteLine($"Cinema Name :{CinemaName} -- All Tickets");
+
+            foreach (var item in _ticket)
+            {
+                if (item != null)
+                {
+                    IPrintable printable = item;
+                    printable.Print();
+                }
+
+            }
+
+        }
+
+
     }
 
 

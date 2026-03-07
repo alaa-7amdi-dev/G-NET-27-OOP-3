@@ -1,5 +1,5 @@
 ﻿using G_NET_27_OOP_3.Inheritance;
-using System.Runtime.InteropServices.Marshalling;
+using G_NET_27_OOP_3.Interfaces;
 
 namespace G_NET_27_OOP_3
 {
@@ -73,11 +73,48 @@ namespace G_NET_27_OOP_3
 
 
             //cinema.CloseCinema();
-           
+
 
 
             #endregion
+            #region Interface
+           // Cinema cinema = new Cinema("Poletcano");
+           // cinema.OpenCinema();
+           // StandardTicket standardTicket = new StandardTicket("B4", "Inception", 200);
+           // VIPTicket vIP = new VIPTicket(false, 50m, "Avengers", 300);
+           // IMAXTicket iMAX = new IMAXTicket(true, "Dune", 250);
+
+           // standardTicket.Book();
+           // vIP.Book();
+           // iMAX.Book();
+           // cinema.AddTicket(standardTicket);
+           // cinema.AddTicket(vIP);
+           // cinema.AddTicket(iMAX);
+
+           //cinema.PrintInfo();
+
+           // Console.WriteLine("Before Change");
+           // vIP.PrintTicket();
+
+           // Console.WriteLine("After Change");
+           // VIPTicket vip2 =(VIPTicket)vIP.Clone();
+           // vip2.MovieName = "Xman";
+           // vip2.PrintTicket();
+
+
+           // Console.WriteLine("Cancel Ticket");
+           // iMAX.Cancel();
+           // iMAX.Print();
+           // IPrintable[] printables = { vIP, standardTicket, iMAX };
+           // BookingHelper.Helper(printables);
+
+
+           // cinema.CloseCinema();
+
+            #endregion
+
+
         }
-  
+
     }
 }
