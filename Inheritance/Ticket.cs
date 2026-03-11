@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace G_NET_27_OOP_3.Inheritance
 {
-    internal class Ticket : IPrintable , IBooking_ICancellatoin , ICloneable<Ticket>
+    internal abstract class Ticket : IPrintable , IBooking_ICancellatoin , ICloneable<Ticket>
     {
 
         public bool IsBooked { get; private set; } = false;

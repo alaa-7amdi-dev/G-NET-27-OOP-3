@@ -78,40 +78,84 @@ namespace G_NET_27_OOP_3
 
             #endregion
             #region Interface
-           // Cinema cinema = new Cinema("Poletcano");
-           // cinema.OpenCinema();
-           // StandardTicket standardTicket = new StandardTicket("B4", "Inception", 200);
-           // VIPTicket vIP = new VIPTicket(false, 50m, "Avengers", 300);
-           // IMAXTicket iMAX = new IMAXTicket(true, "Dune", 250);
+            // Cinema cinema = new Cinema("Poletcano");
+            // cinema.OpenCinema();
+            // StandardTicket standardTicket = new StandardTicket("B4", "Inception", 200);
+            // VIPTicket vIP = new VIPTicket(false, 50m, "Avengers", 300);
+            // IMAXTicket iMAX = new IMAXTicket(true, "Dune", 250);
 
-           // standardTicket.Book();
-           // vIP.Book();
-           // iMAX.Book();
-           // cinema.AddTicket(standardTicket);
-           // cinema.AddTicket(vIP);
-           // cinema.AddTicket(iMAX);
+            // standardTicket.Book();
+            // vIP.Book();
+            // iMAX.Book();
+            // cinema.AddTicket(standardTicket);
+            // cinema.AddTicket(vIP);
+            // cinema.AddTicket(iMAX);
 
-           //cinema.PrintInfo();
+            //cinema.PrintInfo();
 
-           // Console.WriteLine("Before Change");
-           // vIP.PrintTicket();
+            // Console.WriteLine("Before Change");
+            // vIP.PrintTicket();
 
-           // Console.WriteLine("After Change");
-           // VIPTicket vip2 =(VIPTicket)vIP.Clone();
-           // vip2.MovieName = "Xman";
-           // vip2.PrintTicket();
-
-
-           // Console.WriteLine("Cancel Ticket");
-           // iMAX.Cancel();
-           // iMAX.Print();
-           // IPrintable[] printables = { vIP, standardTicket, iMAX };
-           // BookingHelper.Helper(printables);
+            // Console.WriteLine("After Change");
+            // VIPTicket vip2 =(VIPTicket)vIP.Clone();
+            // vip2.MovieName = "Xman";
+            // vip2.PrintTicket();
 
 
-           // cinema.CloseCinema();
+            // Console.WriteLine("Cancel Ticket");
+            // iMAX.Cancel();
+            // iMAX.Print();
+            // IPrintable[] printables = { vIP, standardTicket, iMAX };
+            // BookingHelper.Helper(printables);
+
+
+            // cinema.CloseCinema();
 
             #endregion
+
+            #region  Abstraction
+            ////Ticket ticket = new Ticket(); ERROR: Cannot create instance of abstract type 'Ticket'
+
+            //Cinema cinema = new Cinema("Reworld");
+            //cinema.OpenCinema();
+            //StandardTicket standard = new StandardTicket("A5" , "X_MAN",200);
+            //IMAXTicket iMAX = new IMAXTicket(true,"The King Lion", 300);
+            //VIPTicket vIPTicket = new VIPTicket(true , 120,"Rebonzel",400);
+            //standard.Book();
+            //iMAX.Book();
+            //vIPTicket.Book();
+            //cinema.AddTicket(standard);
+            //cinema.AddTicket(iMAX);
+            //cinema.AddTicket(vIPTicket);
+
+            //cinema.printAll();
+
+            //Console.WriteLine("#################");
+
+            //Console.WriteLine("Polymorphism: Final Price per Ticket");
+            //Ticket[] tickets = { standard, vIPTicket, iMAX };
+            //foreach (Ticket ticket in tickets)
+            //{
+            //    Console.WriteLine($" {ticket.GetType().Name} => Final Price: {ticket.PriceAfterTax:F2}");
+            //}
+
+            //Console.WriteLine("#################");
+
+            //Console.WriteLine("Extension Method: Receipt");
+            //string receipt = vIPTicket.GetFormettedReceipt();
+            //Console.WriteLine(receipt);
+
+            //Console.WriteLine("#################");
+
+            //Console.WriteLine("  Extension Method: Total Revenue ");
+            //decimal TotalRevenue  = tickets.GetTotalRevenue();
+            //Console.WriteLine($" Total Revenue = {TotalRevenue:f2}");
+
+            //cinema.CloseCinema();
+            #endregion
+
+
+
 
 
         }
